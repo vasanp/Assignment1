@@ -1,3 +1,22 @@
+#1.	Return all the duplicate values from list of arraylist
+
+
+from collections import Counter
+
+l1 = [[1,1,3,2],[9,8,8,1],[0,4,5,0,0,1,4]]
+
+l2=[]
+
+lengthofl1 = len(l1)
+
+for r in range(lengthofl1):
+    l2=l1[r]
+    counts = dict(Counter(l2))
+    duplicates = {key:value for key, value in counts.items() if value > 1}
+    print("Duplicate Element : Count--> ",duplicates)
+
+print("\n")
+
 
 #2.	Merge two lists as shown below
 
@@ -34,7 +53,7 @@ for str4 in sublist:
 
 print("Merged list : ", list4)
 
-
+print("\n")
 
 #4.	Map the dictionary in the following manner
 
@@ -43,6 +62,8 @@ list6 = [10, 20, 30]
 
 dict_map = dict(zip(list5, list6))
 print("New Dict is : ", dict_map)
+
+print("\n")
 
 
 #5.	 Merge following two Python dictionaries into one
@@ -53,6 +74,7 @@ dict_2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
 dict_3 = {**dict_1, **dict_2}
 print("Merged Dict is : ", dict_3)
 
+print("\n")
 
 #6.	 Rename key city to location in the following dictionary
 
@@ -65,6 +87,8 @@ dict_4 = {
 
 dict_4['location'] = dict_4.pop('city')
 print("Updated Keys are : ",dict_4.keys())
+
+print("\n")
 
 #7.	Convert Dictionary to list
 
